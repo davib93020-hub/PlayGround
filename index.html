@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f3f1e9" />
+  <title>Motorhaus — The Auto Company</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="Motorhaus home"><span class="brand-mark">M</span><span class="brand-name">MOTORHAUS<small>THE AUTO COMPANY</small></span></a>
+      <div class="company-switch"><span class="company-dot"></span><span id="companyLabel">Morrow Motor Co.</span><span class="chevron">⌄</span></div>
+      <div class="nav-caption">COMPANY</div>
+      <nav id="mainNav" aria-label="Main navigation">
+        <button class="nav-item active" data-view="overview"><span class="nav-icon">▦</span>Overview</button>
+        <button class="nav-item" data-view="design"><span class="nav-icon">◇</span>Design studio</button>
+        <button class="nav-item" data-view="research"><span class="nav-icon">⌘</span>Research lab<span class="nav-count" id="researchNav">0</span></button>
+        <button class="nav-item" data-view="people"><span class="nav-icon">♙</span>People &amp; sites</button>
+        <button class="nav-item" data-view="market"><span class="nav-icon">↗</span>Market</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="year-card"><div class="year-card-top"><span>ON THE ROAD SINCE</span><span class="live-dot"></span></div><strong id="sideYear">2000</strong><div class="year-sub">A legacy starts somewhere.</div></div>
+        <button class="reset-link" id="resetBtn">↻ &nbsp;Start a new company</button>
+      </div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar">
+        <div class="mobile-brand"><span class="brand-mark">M</span><span>MOTORHAUS</span></div>
+        <div class="breadcrumb"><span>COMPANY</span><span class="crumb-slash">/</span><strong id="crumbTitle">OVERVIEW</strong></div>
+        <div class="top-actions"><div class="top-stat"><span class="stat-icon money-icon">$</span><div><small>TREASURY</small><strong id="cashTop">$2,000</strong></div></div><div class="top-divider"></div><div class="top-stat research-stat"><span class="stat-icon research-icon">✳</span><div><small>RESEARCH</small><strong id="rpTop">0 <em>RP</em></strong></div></div><button class="advance-btn" id="advanceBtn"><span>↗</span> Advance year</button></div>
+      </header>
+      <div class="content" id="appContent"></div>
+      <footer class="footer"><span>© <span id="footerYear">2000</span> MOTORHAUS MOTOR COMPANY</span><span>BUILT TO MOVE FORWARD <span class="footer-star">✳</span></span></footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="modal-backdrop" id="modalBackdrop" hidden><section class="modal" id="modal" role="dialog" aria-modal="true"></section></div>
+  <script src="game.js"></script>
+</body>
+</html>
